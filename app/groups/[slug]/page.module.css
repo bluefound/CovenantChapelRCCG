@@ -1,0 +1,302 @@
+/* Group Detail Page Styles */
+
+.hero {
+    background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-primary-dark) 100%);
+    padding: calc(var(--header-height) + var(--space-12)) 0 var(--space-12);
+    color: var(--color-white);
+}
+
+.backLink {
+    display: inline-flex;
+    align-items: center;
+    gap: var(--space-2);
+    color: rgba(255, 255, 255, 0.8);
+    font-size: var(--text-sm);
+    font-weight: var(--font-medium);
+    margin-bottom: var(--space-6);
+    transition: color var(--transition-fast);
+}
+
+.backLink:hover {
+    color: var(--color-white);
+}
+
+.heroContent {
+    text-align: center;
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+.heroIcon {
+    width: 96px;
+    height: 96px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(255, 255, 255, 0.2);
+    border-radius: var(--radius-2xl);
+    margin: 0 auto var(--space-6);
+}
+
+.heroTitle {
+    font-family: var(--font-display);
+    font-size: clamp(var(--text-3xl), 5vw, var(--text-4xl));
+    font-weight: var(--font-bold);
+    margin-bottom: var(--space-4);
+}
+
+.heroSubtitle {
+    font-size: var(--text-lg);
+    opacity: 0.9;
+    line-height: var(--leading-relaxed);
+}
+
+/* Content */
+.content {
+    background-color: var(--color-white);
+}
+
+.contentGrid {
+    display: grid;
+    grid-template-columns: 1fr 350px;
+    gap: var(--space-12);
+    align-items: start;
+}
+
+.mainContent {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-10);
+}
+
+.contentBlock {
+    padding-bottom: var(--space-8);
+    border-bottom: 1px solid var(--color-gray-200);
+}
+
+.contentBlock:last-child {
+    border-bottom: none;
+}
+
+.blockHeader {
+    display: flex;
+    align-items: center;
+    gap: var(--space-3);
+    margin-bottom: var(--space-4);
+    color: var(--color-primary);
+}
+
+.blockHeader h2 {
+    font-family: var(--font-display);
+    font-size: var(--text-xl);
+    font-weight: var(--font-bold);
+    color: var(--color-gray-900);
+}
+
+.contentBlock>p {
+    font-size: var(--text-lg);
+    color: var(--color-gray-600);
+    line-height: var(--leading-relaxed);
+}
+
+.activitiesList {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-3);
+}
+
+.activitiesList li {
+    display: flex;
+    align-items: flex-start;
+    gap: var(--space-3);
+    color: var(--color-gray-700);
+}
+
+.activitiesList li svg {
+    color: var(--color-primary);
+    flex-shrink: 0;
+    margin-top: 3px;
+}
+
+.meetingTime {
+    font-family: var(--font-display);
+    font-size: var(--text-xl);
+    font-weight: var(--font-semibold);
+    color: var(--color-primary);
+}
+
+/* Sidebar */
+.sidebar {
+    position: sticky;
+    top: calc(var(--header-height) + var(--space-6));
+}
+
+.joinCard {
+    padding: var(--space-8);
+    background-color: var(--color-cream);
+    border-radius: var(--radius-2xl);
+}
+
+.joinCard h3 {
+    font-family: var(--font-display);
+    font-size: var(--text-xl);
+    font-weight: var(--font-bold);
+    color: var(--color-gray-900);
+    margin-bottom: var(--space-3);
+}
+
+.joinCard p {
+    font-size: var(--text-sm);
+    color: var(--color-gray-600);
+    margin-bottom: var(--space-6);
+    line-height: var(--leading-relaxed);
+}
+
+/* Modal */
+.modalOverlay {
+    position: fixed;
+    inset: 0;
+    background-color: rgba(0, 0, 0, 0.6);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 2000;
+    padding: var(--space-4);
+    overflow-y: auto;
+}
+
+.modal {
+    background-color: var(--color-white);
+    border-radius: var(--radius-2xl);
+    max-width: 600px;
+    width: 100%;
+    max-height: 90vh;
+    overflow-y: auto;
+}
+
+.modalHeader {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: var(--space-6);
+    border-bottom: 1px solid var(--color-gray-200);
+    position: sticky;
+    top: 0;
+    background-color: var(--color-white);
+    z-index: 1;
+}
+
+.modalHeader h2 {
+    font-family: var(--font-display);
+    font-size: var(--text-xl);
+    font-weight: var(--font-bold);
+    color: var(--color-gray-900);
+}
+
+.closeBtn {
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--color-gray-100);
+    border: none;
+    border-radius: var(--radius-full);
+    font-size: var(--text-2xl);
+    color: var(--color-gray-600);
+    cursor: pointer;
+    transition: all var(--transition-fast);
+}
+
+.closeBtn:hover {
+    background-color: var(--color-gray-200);
+    color: var(--color-gray-800);
+}
+
+/* Form */
+.joinForm {
+    padding: var(--space-6);
+}
+
+.formGroup {
+    margin-bottom: var(--space-5);
+}
+
+.formGroup label {
+    display: block;
+    font-size: var(--text-sm);
+    font-weight: var(--font-medium);
+    color: var(--color-gray-700);
+    margin-bottom: var(--space-2);
+}
+
+.formRow {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: var(--space-4);
+}
+
+.radioGroup {
+    display: flex;
+    gap: var(--space-6);
+}
+
+.radioLabel {
+    display: flex;
+    align-items: center;
+    gap: var(--space-2);
+    cursor: pointer;
+}
+
+.radioLabel input {
+    width: 18px;
+    height: 18px;
+    accent-color: var(--color-primary);
+}
+
+.radioLabel span {
+    font-size: var(--text-base);
+    color: var(--color-gray-700);
+}
+
+/* Success Message */
+.successMessage {
+    padding: var(--space-12);
+    text-align: center;
+}
+
+.successIcon {
+    color: var(--color-success);
+    margin-bottom: var(--space-6);
+}
+
+.successMessage h2 {
+    font-family: var(--font-display);
+    font-size: var(--text-2xl);
+    font-weight: var(--font-bold);
+    color: var(--color-gray-900);
+    margin-bottom: var(--space-3);
+}
+
+.successMessage p {
+    font-size: var(--text-lg);
+    color: var(--color-gray-600);
+    margin-bottom: var(--space-6);
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+    .contentGrid {
+        grid-template-columns: 1fr;
+    }
+
+    .sidebar {
+        position: static;
+    }
+}
+
+@media (max-width: 640px) {
+    .formRow {
+        grid-template-columns: 1fr;
+    }
+}

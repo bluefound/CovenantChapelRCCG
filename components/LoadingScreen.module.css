@@ -1,0 +1,154 @@
+.loadingScreen {
+    position: fixed;
+    inset: 0;
+    z-index: 9999;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(135deg, #FFFFFF 0%, #FFF8F3 50%, #F5EDE6 100%);
+    transition: opacity 0.7s ease, visibility 0.7s ease;
+}
+
+.loadingScreen.fadeOut {
+    opacity: 0;
+    visibility: hidden;
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    animation: scaleIn 0.6s ease forwards;
+}
+
+@keyframes scaleIn {
+    from {
+        opacity: 0;
+        transform: scale(0.9);
+    }
+
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+.logoContainer {
+    margin-bottom: 1.5rem;
+    animation: pulse 2s ease-in-out infinite;
+}
+
+@keyframes pulse {
+
+    0%,
+    100% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.05);
+    }
+}
+
+.logo {
+    border-radius: 50%;
+    box-shadow: 0 10px 40px rgba(107, 68, 35, 0.2);
+}
+
+.churchName {
+    font-family: var(--font-display, 'Outfit', sans-serif);
+    font-size: 2rem;
+    font-weight: 700;
+    color: #6B4423;
+    margin: 0;
+    letter-spacing: 0.02em;
+}
+
+.tagline {
+    font-size: 0.875rem;
+    color: #8B7355;
+    text-transform: uppercase;
+    letter-spacing: 0.2em;
+    margin-top: 0.25rem;
+}
+
+/* Loader Animation */
+.loader {
+    display: flex;
+    gap: 0.5rem;
+    margin: 2rem 0;
+}
+
+.loaderDot {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background-color: #6B4423;
+    animation: bounce 1.4s ease-in-out infinite;
+}
+
+.loaderDot:nth-child(1) {
+    animation-delay: 0s;
+}
+
+.loaderDot:nth-child(2) {
+    animation-delay: 0.2s;
+}
+
+.loaderDot:nth-child(3) {
+    animation-delay: 0.4s;
+}
+
+@keyframes bounce {
+
+    0%,
+    80%,
+    100% {
+        transform: translateY(0);
+        opacity: 0.6;
+    }
+
+    40% {
+        transform: translateY(-12px);
+        opacity: 1;
+    }
+}
+
+.welcomeMessage {
+    font-family: var(--font-display, 'Outfit', sans-serif);
+    font-size: 1.125rem;
+    color: #8B7355;
+    font-style: italic;
+    margin: 0;
+    animation: fadeInUp 0.8s ease 0.5s forwards;
+    opacity: 0;
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .churchName {
+        font-size: 1.5rem;
+    }
+
+    .logoContainer {
+        margin-bottom: 1rem;
+    }
+
+    .logo {
+        width: 120px;
+        height: 120px;
+    }
+}
