@@ -3,6 +3,7 @@ import "./globals.css";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import LoadingScreen from "@/components/LoadingScreen";
+import OneSignal from "@/components/OneSignal";
 
 const outfit = Outfit({
   variable: "--font-outfit",
@@ -33,6 +34,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body className={`${outfit.variable} ${inter.variable}`}>
+        <OneSignal />
         <LoadingScreen />
         <Header />
         <main>{children}</main>
