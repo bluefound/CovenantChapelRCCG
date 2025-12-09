@@ -12,6 +12,7 @@ import {
     CheckCircle
 } from 'lucide-react';
 import SectionHeader from '@/components/SectionHeader';
+import { submitToSheet } from '@/lib/sheets';
 import styles from './page.module.css';
 
 export default function ContactPage() {
@@ -35,10 +36,20 @@ export default function ContactPage() {
         e.preventDefault();
         setIsSubmitting(true);
 
-        // Simulate form submission
-        await new Promise(resolve => setTimeout(resolve, 1500));
-
-        console.log('Form Data:', formData);
+        if (activeForm === 'prayer') {
+            await submitToSheet('prayer-request', {
+                name: formData.name,
+                email: formData.email,
+                request: formData.prayerRequest
+            });
+        } else {
+            await submitToSheet('contact', {
+                name: formData.name,
+                email: formData.email,
+                subject: formData.subject,
+                message: formData.message
+            });
+        }
 
         setIsSubmitting(false);
         setSubmitted(true);
@@ -93,7 +104,7 @@ export default function ContactPage() {
                                     </div>
                                     <div className={styles.infoContent}>
                                         <h4>Our Location</h4>
-                                        <p>Church Address Coming Soon</p>
+                                        <p>Opposite Owkaz Filling Station,<br />Badore Simawa, Sagamu, Ogun State</p>
                                     </div>
                                 </div>
 
@@ -103,7 +114,7 @@ export default function ContactPage() {
                                     </div>
                                     <div className={styles.infoContent}>
                                         <h4>Phone</h4>
-                                        <p>+234 XXX XXX XXXX</p>
+                                        <p><a href="tel:+2349167369876">0916 736 9876</a></p>
                                     </div>
                                 </div>
 
@@ -113,7 +124,7 @@ export default function ContactPage() {
                                     </div>
                                     <div className={styles.infoContent}>
                                         <h4>Email</h4>
-                                        <p>info@covenantchapelmz.org</p>
+                                        <p><a href="mailto:rccgconvenantmegachapel@gmail.com">rccgconvenantmegachapel@gmail.com</a></p>
                                     </div>
                                 </div>
 

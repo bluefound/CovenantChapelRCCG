@@ -137,15 +137,15 @@ export default function Footer() {
                             <ul className={styles.contactList}>
                                 <li className={styles.contactItem}>
                                     <MapPin size={18} />
-                                    <span>Church Address Coming Soon</span>
+                                    <span>Opposite Owkaz Filling Station,<br />Badore Simawa, Sagamu, Ogun State</span>
                                 </li>
                                 <li className={styles.contactItem}>
                                     <Phone size={18} />
-                                    <span>Phone Number Coming Soon</span>
+                                    <a href="tel:+2349167369876">0916 736 9876</a>
                                 </li>
                                 <li className={styles.contactItem}>
                                     <Mail size={18} />
-                                    <span>Email Coming Soon</span>
+                                    <a href="mailto:rccgconvenantmegachapel@gmail.com">rccgconvenantmegachapel@gmail.com</a>
                                 </li>
                             </ul>
                         </div>
