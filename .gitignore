@@ -36,3 +36,4 @@ next-env.d.ts
 
 # Secrets
 docs/notification-script.js
+scripts/test-onesignal.js
