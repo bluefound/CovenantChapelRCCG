@@ -335,7 +335,7 @@ export default function ContactPage() {
                                 </label>
                                 <label className={styles.checkbox}>
                                     <input type="checkbox" defaultChecked />
-                                    <span>Monthly Course Over Vigil Reminder</span>
+                                    <span>Monthly Cross Over Vigil Reminder</span>
                                 </label>
                             </div>
                             <div className={styles.emailSubscribe}>

@@ -13,7 +13,26 @@ export default function OneSignal() {
                 notifyButton: {
                     enable: true,
                 },
-                allowLocalhostAsSecureOrigin: true, // Helpful for testing
+                allowLocalhostAsSecureOrigin: true,
+                promptOptions: {
+                    slidedown: {
+                        prompts: [
+                            {
+                                type: "push",
+                                autoPrompt: true,
+                                text: {
+                                    actionMessage: "We'd like to show you notifications for the latest news and updates.",
+                                    acceptButton: "Allow",
+                                    cancelButton: "Cancel"
+                                },
+                                delay: {
+                                    pageViews: 1,
+                                    timeDelay: 5
+                                }
+                            }
+                        ]
+                    }
+                }
             });
         });
     }, []);

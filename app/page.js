@@ -271,7 +271,7 @@ export default function Home() {
                 centered={false}
               />
               <p className={styles.eventsText}>
-                From our monthly Course Over vigil to special celebrations, there's always
+                From our monthly Cross Over vigil to special celebrations, there's always
                 something happening at Covenant Chapel. Join us for worship, fellowship, and
                 life-changing encounters with God.
               </p>
@@ -292,7 +292,7 @@ export default function Home() {
                     <span className={styles.eventDay}>Last Day</span>
                   </div>
                   <div className={styles.eventInfo}>
-                    <h5>Course Over Vigil</h5>
+                    <h5>Cross Over Vigil</h5>
                     <p>11:00 PM (Online)</p>
                   </div>
                 </div>

@@ -42,7 +42,7 @@ const upcomingEvents = [
     },
     {
         id: 2,
-        title: 'Course Over Monthly Vigil',
+        title: 'Cross Over Monthly Vigil',
         date: 'Last Day of Every Month',
         time: '11:00 PM',
         location: 'Online',
