@@ -8,7 +8,9 @@ import {
     Mail,
     Phone,
     MapPin,
-    Heart
+    Heart,
+    MessageCircle,
+    Music2
 } from 'lucide-react';
 import styles from './Footer.module.css';
 
@@ -30,10 +32,12 @@ const serviceTimes = [
 ];
 
 const socialLinks = [
-    { name: 'Instagram', icon: Instagram, href: '#' },
-    { name: 'Facebook', icon: Facebook, href: '#' },
-    { name: 'YouTube', icon: Youtube, href: '#' },
+    { name: 'Instagram', icon: Instagram, href: 'https://www.instagram.com/rccg_ccmz?igsh=ZzI5cjVrZ2w4N2Ew' },
+    { name: 'Facebook', icon: Facebook, href: 'https://www.facebook.com/share/1BzmDyunMi/' },
+    { name: 'YouTube', icon: Youtube, href: 'https://youtube.com/@rccgconvenantchapel?si=b1eAVpyUB97mXCr8' },
     { name: 'Twitter', icon: Twitter, href: '#' },
+    { name: 'TikTok', icon: Music2, href: 'https://www.tiktok.com/@rccg_ccmz?_r=1&_t=ZM-92MYx9YcnRk' },
+    { name: 'WhatsApp', icon: MessageCircle, href: 'https://chat.whatsapp.com/D8wYjVNgmPV15KCxLA6Y5Y' },
 ];
 
 export default function Footer() {

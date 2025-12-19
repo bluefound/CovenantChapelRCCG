@@ -1,3 +1,5 @@
+'use client';
+import { useState } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
 import {
@@ -20,6 +22,8 @@ import SectionHeader from '@/components/SectionHeader';
 import ServiceTimeCard from '@/components/ServiceTimeCard';
 import CountdownTimer from '@/components/CountdownTimer';
 import GalleryPreview from '@/components/GalleryPreview';
+import VideoModal from '@/components/VideoModal';
+import SermonsPreview from '@/components/SermonsPreview';
 import { departments, serviceTimes, testimonies } from '@/lib/data';
 import styles from './page.module.css';
 
@@ -37,8 +41,11 @@ const iconMap = {
 };
 
 export default function Home() {
+  const [isVideoModalOpen, setIsVideoModalOpen] = useState(false);
+
   return (
     <>
+      <VideoModal isOpen={isVideoModalOpen} onClose={() => setIsVideoModalOpen(false)} />
       {/* Hero Section */}
       <section className={styles.hero}>
         <div className={styles.heroBackground}>
@@ -59,10 +66,13 @@ export default function Home() {
                 Join Us This Sunday
                 <ArrowRight size={20} />
               </Link>
-              <Link href="#watch" className="btn btn-secondary btn-lg">
+              <button
+                onClick={() => setIsVideoModalOpen(true)}
+                className="btn btn-secondary btn-lg"
+              >
                 <Play size={20} />
                 Watch Online
-              </Link>
+              </button>
             </div>
           </div>
           <div className={styles.heroLogo}>
@@ -313,6 +323,9 @@ export default function Home() {
 
       {/* Gallery Preview */}
       <GalleryPreview />
+
+      {/* Sermons Preview */}
+      <SermonsPreview />
 
       {/* CTA Section */}
       <section className={styles.ctaSection}>

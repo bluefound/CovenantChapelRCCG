@@ -17,6 +17,14 @@ const galleryItems = [
     { id: 8, month: 'December', year: 2024, title: 'Child Dedication', image: '/images/dedication-1.jpg' },
     { id: 9, month: 'December', year: 2024, title: 'Worship Ministration', image: '/images/worship-3.jpg' },
     { id: 10, month: 'December', year: 2024, title: 'Church Member', image: '/images/member-3.jpg' },
+    { id: 11, month: 'December', year: 2024, title: 'Sunday Celebration', image: '/images/IMG_7904.JPG' },
+    { id: 12, month: 'December', year: 2024, title: 'Praise and Worship', image: '/images/IMG_7905.JPG' },
+    { id: 13, month: 'December', year: 2024, title: 'Prayer and Intercession', image: '/images/IMG_7906.JPG' },
+    { id: 14, month: 'December', year: 2024, title: 'Congregation', image: '/images/IMG_8010.JPG' },
+    { id: 15, month: 'December', year: 2024, title: 'Special Presentation', image: '/images/IMG_8161.JPG' },
+    { id: 16, month: 'December', year: 2024, title: 'Worship Team', image: '/images/IMG_7911.JPG' },
+    { id: 17, month: 'December', year: 2024, title: 'Church Atmosphere', image: '/images/IMG_7913.JPG' },
+    { id: 18, month: 'December', year: 2024, title: 'Fellowship', image: '/images/IMG_7916.JPG' },
 ];
 
 const months = ['All', 'December'];

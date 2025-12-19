@@ -1,0 +1,126 @@
+.sermons {
+    padding-bottom: 5rem;
+}
+
+.sermonsGrid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-top: 3rem;
+}
+
+.sermonCard {
+    background: white;
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.sermonCard:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.1);
+}
+
+.thumbnailContainer {
+    position: relative;
+    aspect-ratio: 16 / 9;
+    overflow: hidden;
+}
+
+.thumbnail {
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.sermonCard:hover .thumbnail {
+    transform: scale(1.05);
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.3);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.sermonCard:hover .overlay {
+    opacity: 1;
+}
+
+.playBtn {
+    background: var(--primary-color, #0056b3);
+    color: white;
+    border: none;
+    width: 64px;
+    height: 64px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: transform 0.2s ease;
+}
+
+.playBtn:hover {
+    transform: scale(1.1);
+}
+
+.sermonInfo {
+    padding: 1.5rem;
+}
+
+.meta {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 0.75rem;
+    color: #666;
+    font-size: 0.85rem;
+}
+
+.metaItem {
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+}
+
+.sermonTitle {
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: #1a1a1a;
+    margin-bottom: 1rem;
+    line-height: 1.4;
+}
+
+.watchLink {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: var(--primary-color, #0056b3);
+    font-weight: 600;
+    text-decoration: none;
+    transition: gap 0.2s ease;
+}
+
+.watchLink:hover {
+    gap: 0.75rem;
+}
+
+.sermonsCta {
+    margin-top: 4rem;
+    display: flex;
+    justify-content: center;
+}
+
+@media (max-width: 768px) {
+    .sermonsGrid {
+        grid-template-columns: 1fr;
+    }
+}

@@ -7,11 +7,13 @@ import SectionHeader from '@/components/SectionHeader';
 import styles from './GalleryPreview.module.css';
 
 const galleryImages = [
+    { src: '/images/IMG_7904.JPG', alt: 'Church Service' },
+    { src: '/images/IMG_7905.JPG', alt: 'Worship Session' },
+    { src: '/images/IMG_7906.JPG', alt: 'Prayer Time' },
+    { src: '/images/IMG_8010.JPG', alt: 'Congregation' },
+    { src: '/images/IMG_8161.JPG', alt: 'Special Ministration' },
     { src: '/images/worship-1.jpg', alt: 'Worship ministration' },
     { src: '/images/prayer-1.jpg', alt: 'Prayer session' },
-    { src: '/images/drama-1.jpg', alt: 'Drama presentation' },
-    { src: '/images/worship-2.jpg', alt: 'Worship leader' },
-    { src: '/images/congregation-1.jpg', alt: 'Congregation in worship' },
 ];
 
 export default function GalleryPreview() {
